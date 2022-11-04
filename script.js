@@ -30,140 +30,42 @@ let player2 = new SecondPlayer("Player O", "O")
  // 1 is player1 turn at the start of the game. 0 is player2 turn. will alternate.
 let turn = 1
 //checks whos turn it is and based on that, the text will change
-function whosTurn1() {
 
-    if(turn == 1) {
-        document.getElementById("block0").innerHTML = player1.isPlayerX;
-        document.getElementById("block0").disabled = true;
-        turn = 0;
+
+// refactoring whosturn function for each square
+// num passed in from square attribute. can be either id or data* attribute
+function whosTurn(num){
+    if(turn){
+      document.getElementById(`block${num}`).innerText = player1.isPlayerX;
+      document.getElementById(`block${num}`).disabled = true; 
+      turn = 0;
     }
-    else {
-        document.getElementById("block0").innerHTML = player2.isPlayerO;
-        document.getElementById("block0").disabled = true;
+    else{
+        document.getElementById(`block${num}`).innerText = player2.isPlayerO;
+        document.getElementById(`block${num}`).disabled = true;
         turn = 1;
     }
-
 }
 
-function whosTurn2() {
+// function clickedBlock(blockClicked) {
+//     let clicked = blockClicked.target;
+    
+//     let clickedIndex = parseInt(clicked.getAttribute("data-index-number"));
+//     return clickedIndex
+// }
 
-    if(turn == 1) {
-        document.getElementById("block1").innerHTML = player1.isPlayerX;
-        document.getElementById("block1").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block1").innerHTML = player2.isPlayerO;
-        document.getElementById("block1").disabled = true;
-        turn = 1;
-    }
+let clickedBlock = document.addEventListener("click",function(event){
+    let clicked = event.target;
+    let clickedIndex = clicked.getAttribute("data-index-number");
+    return clickedIndex
+});
 
-}
 
-function whosTurn3() {
+    
 
-    if(turn == 1) {
-        document.getElementById("block2").innerHTML = player1.isPlayerX;
-        document.getElementById("block2").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block2").innerHTML = player2.isPlayerO;
-        document.getElementById("block2").disabled = true;
-        turn = 1;
-    }
 
-}
 
-function whosTurn4() {
 
-    if(turn == 1) {
-        document.getElementById("block3").innerHTML = player1.isPlayerX;
-        document.getElementById("block3").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block3").innerHTML = player2.isPlayerO;
-        document.getElementById("block3").disabled = true;
-        turn = 1;
-    }
-
-}
-
-function whosTurn5() {
-
-    if(turn == 1) {
-        document.getElementById("block4").innerHTML = player1.isPlayerX;
-        document.getElementById("block4").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block4").innerHTML = player2.isPlayerO;
-        document.getElementById("block4").disabled = true;
-        turn = 1;
-    }
-
-}
-
-function whosTurn6() {
-
-    if(turn == 1) {
-        document.getElementById("block5").innerHTML = player1.isPlayerX;
-        document.getElementById("block5").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block5").innerHTML = player2.isPlayerO;
-        document.getElementById("block5").disabled = true;
-        turn = 1;
-    }
-
-}
-
-function whosTurn7() {
-
-    if(turn == 1) {
-        document.getElementById("block6").innerHTML = player1.isPlayerX;
-        document.getElementById("block6").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block6").innerHTML = player2.isPlayerO;
-        document.getElementById("block6").disabled = true;
-        turn = 1;
-    }
-
-}
-
-function whosTurn8() {
-
-    if(turn == 1) {
-        document.getElementById("block7").innerHTML = player1.isPlayerX;
-        document.getElementById("block7").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block7").innerHTML = player2.isPlayerO;
-        document.getElementById("block7").disabled = true;
-        turn = 1;
-    }
-
-}
-
-function whosTurn9() {
-
-    if(turn == 1) {
-        document.getElementById("block8").innerHTML = player1.isPlayerX;
-        document.getElementById("block8").disabled = true;
-        turn = 0;
-    }
-    else {
-        document.getElementById("block8").innerHTML = player2.isPlayerO;
-        document.getElementById("block8").disabled = true;
-        turn = 1;
-    }
-
-}
 
 //function to check if anyone has won.
 function winningCombo() {
