@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>   
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <br>
+        <p>The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either opponent has three in a row or all nine squares are filled. X always goes first, and if no one has three in a row then it's a stalemate.</p>
+    </main>
+    <br>
+
+
+    <div class="board-container">
+        
+        <div class="board-grid">
+            <button class="item" data-number= "0" id="block0" onclick="whosTurn1(); winningCombo()"></button>
+            <button class="item" data-number= "1" id="block1" onclick="whosTurn2(); winningCombo()"></button>
+            <button class="item" data-number= "2" id="block2" onclick="whosTurn3(); winningCombo()"></button>
+            <button class="item" data-number= "3" id="block3" onclick="whosTurn4(); winningCombo()"></button>
+            <button class="item" data-number= "4" id="block4" onclick="whosTurn5(); winningCombo()"></button>
+            <button class="item" data-number= "5" id="block5" onclick="whosTurn6(); winningCombo()"></button>
+            <button class="item" data-number= "6" id="block6" onclick="whosTurn7(); winningCombo()"></button>
+            <button class="item" data-number= "7" id="block7" onclick="whosTurn8(); winningCombo()"></button>
+            <button class="item" data-number= "8" id="block8" onclick="whosTurn9(); winningCombo()"></button>
+        </div>
+        
+    </div>
+    
+    <h2 id="displayMessage">First player to click on a space is X</h2>
+
+
+    <button id="button" onclick="resetButton()">Reset</button>
+
+
+     
+</body>
+</html>
