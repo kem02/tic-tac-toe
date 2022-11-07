@@ -4,15 +4,23 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: azure;
+}
+
 main {
     text-align: center;
-    border: black solid 1px;
+    /* border: black solid 1px; */
+}
+
+main p{
+    font-size: 18px;
 }
 
 
 
 .board-container {
-    border: black solid 1px;
+    /* border: black solid 1px; */
     display: flex;
     justify-content: center;
     /* flex-wrap: wrap; */
@@ -22,7 +30,7 @@ main {
 }
 
 .board-grid {
-    border: black solid 5px;
+    /* border: black solid 5px; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -44,9 +52,24 @@ main {
     height: 150px;
     background-color: aqua;
     flex: 1 0 33%;
+    font-size: 60px;
 }
 
 .item:disabled {
     /* background: white; */
     color: black;
+  }
+
+  .bottom-div {
+    text-align:  center;
+  }
+
+  .resetButtn {
+    font-size: 18px;
+    background-color: aqua;
+    padding: 8px;
+  }
+  .resetButtn:hover {
+    background-color: rgba(20, 41, 228, 0.66);
+    
   }

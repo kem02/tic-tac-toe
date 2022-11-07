@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>   
+       
     <title>Tic Tac Toe</title>
 </head>
 <body>
     <main>
         <h1>Tic Tac Toe</h1>
         <br>
-        <p>The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either opponent has three in a row or all nine squares are filled. X always goes first, and if no one has three in a row then it's a stalemate.</p>
+        <p>The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either opponent has three in a row or all nine squares are filled. X always goes first, and if no one has three in a row then it's a tie.</p>
     </main>
     <br>
 
@@ -20,25 +20,29 @@
     <div class="board-container">
         
         <div class="board-grid">
-            <button class="item" data-index-number= "0" id="block0" onclick="whosTurn(0); winningCombo()"></button>
-            <button class="item" data-index-number= "1" id="block1" onclick="whosTurn(1); winningCombo()"></button>
-            <button class="item" data-index-number= "2" id="block2" onclick="whosTurn(2); winningCombo()"></button>
-            <button class="item" data-index-number= "3" id="block3" onclick="whosTurn(3); winningCombo()"></button>
-            <button class="item" data-index-number= "4" id="block4" onclick="whosTurn(4); winningCombo()"></button>
-            <button class="item" data-index-number= "5" id="block5" onclick="whosTurn(5); winningCombo()"></button>
-            <button class="item" data-index-number= "6" id="block6" onclick="whosTurn(6); winningCombo()"></button>
-            <button class="item" data-index-number= "7" id="block7" onclick="whosTurn(7); winningCombo()"></button>
-            <button class="item" data-index-number= "8" id="block8" onclick="whosTurn(8); winningCombo()"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
+            <button class="item" id="block"></button>
         </div>
         
     </div>
     
-    <h2 id="displayMessage">First player to click on a space is X</h2>
+    <div class="bottom-div">
+
+         <h2 id="displayMessage">First player to click on a space is X</h2>
+        <br>
+
+        <button class="resetButtn" id="button" onclick="resetButton()">Reset</button>
 
 
-    <button id="button" onclick="resetButton()">Reset</button>
-
-
-     
+    </div>
+   
+    <script src="./script.js"></script>
 </body>
 </html>
